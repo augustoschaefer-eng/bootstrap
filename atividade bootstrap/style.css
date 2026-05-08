@@ -1,4 +1,163 @@
-.card img{
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #3d2e00 100%);
+    color: var(--creme);
+    min-height: 100vh;
+  }
+ 
+ 
+ :root {
+    --vermelho: #C8001A;
+    --dourado: #F5C518;
+    --dourado-escuro: #B8940A;
+    --creme: #FFF8E7;
+    --marrom: #2A1505;
+    --preto: #0D0600;
+    --azul-noite: #0A1628;
+    --stripe1: #C8001A;
+    --stripe2: #FFF8E7;
+  }
+ 
+
+ 
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 48px;
+    background: linear-gradient(180deg, rgba(13,6,0,0.97) 0%, transparent 100%);
+    backdrop-filter: blur(4px);
+  }
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--dourado);
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px rgba(245,197,24,0.5);
+  }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--creme);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0; height: 2px;
+    background: var(--dourado);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .nav-links a:hover { color: var(--dourado); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    background: var(--vermelho);
+    color: var(--creme) !important;
+    padding: 8px 24px !important;
+    border: 2px solid var(--dourado);
+    transition: background 0.3s, color 0.3s !important;
+  }
+  .nav-cta:hover { background: var(--dourado) !important; color: var(--marrom) !important; }
+  .nav-cta::after { display: none !important; }
+ 
+  body {
+    background-color: var(--preto);
+    color: var(--creme);
+  }
+  
+  #hero {
+    min-height: 100vh;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    background:
+      linear-gradient(rgba(13,6,0,0.55), rgba(13,6,0,0.55)),
+      url('/image/circo.webp') center center / cover no-repeat;
+  }
+  
+  .hero-content {
+    color: var(--creme);
+    padding: 24px;
+  }
+  
+  .hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 6px;
+    color: var(--dourado);
+    text-shadow: 0 0 30px rgba(245,197,24,0.4);
+    margin-bottom: 16px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: var(--creme);
+  }
+  
+  /* Seção de atrações */
+  #atracoes {
+    padding: 80px 24px;
+  }
+  
+  #atracoes h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: var(--dourado);
+    letter-spacing: 4px;
+    margin-bottom: 48px;
+  }
+  
+  /* Wrapper dos cards: lado a lado, centralizados */
+  .cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  /* Estilo dos cards */
+  .cards-wrapper .card {
+    width: 280px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 60%, #3d2e00 100%);
+    border: 1px solid var(--dourado);
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--creme);
+  }
+  
+  .cards-wrapper .card-img-top {
+    width: 100%;
     height: 200px;
     object-fit: cover;
-}
+  }
+  
+  .cards-wrapper .card-body {
+    margin: 0;
+    padding: 16px;
+  }
+  
+  .cards-wrapper .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: var(--dourado);
+    text-shadow: 0 0 8px rgba(245, 197, 24, 0.4);
+  }
+  
+  .cards-wrapper .card-text {
+    font-size: 0.9rem;
+    color: #c9b99a;
+  }
+
+
+
+
+  
+
+  
